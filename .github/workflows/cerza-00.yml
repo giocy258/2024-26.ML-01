@@ -6,6 +6,9 @@ jobs:
         runs-on: ubuntu-latest
         steps: 
          - run: echo "davide lacerenza"
-        
+         - run: python --version
+         - run: ls -la
+         - run: pwd
+         - run: env
 
             
