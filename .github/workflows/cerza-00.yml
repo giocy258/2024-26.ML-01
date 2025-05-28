@@ -5,6 +5,7 @@ jobs:
     lavoroesempio:
         runs-on: ubuntu-latest
         steps: 
-         - echo "davide lacerenza"
+         - run: echo "davide lacerenza"
+        
 
             
