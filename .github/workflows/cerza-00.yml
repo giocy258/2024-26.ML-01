@@ -1,6 +1,6 @@
 name: action di giocy
 on:
-    push:
+    push:                   #si può pure commentare a differenza del json... PE SI SSI MO
 jobs:
     lavoroesempio:
         runs-on: ubuntu-latest
