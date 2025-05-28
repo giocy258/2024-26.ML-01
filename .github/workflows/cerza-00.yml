@@ -1,0 +1,10 @@
+name: action di giocy
+on:
+    push:
+jobs:
+    lavoroesempio:
+        runs-on: ubuntu-latest
+        steps: 
+         - echo "davide lacerenza"
+
+            
