@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: 2024-26.ML-01/cerza
+        working-directory: cerza
     
     steps:
       - name: Checkout
@@ -35,4 +35,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: model-artifacts
-          path: 2024-26.ML-01/cerza
+          path: cerza
