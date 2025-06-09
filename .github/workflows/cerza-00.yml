@@ -1,18 +1,40 @@
-name: action di giocy
+name: Action di giocy
+
 on:
-    push:                   #si può pure commentare a differenza del json... PE SI SSI MO
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: '0 0 * * *'
+
 jobs:
-    lavoroesempio:
-        runs-on: ubuntu-latest
-        steps: 
-         - run: echo "davide lacerenza"
-         - run: python --version
-         - run: ls -la
-         - run: pwd
-         - run: env
-         - uses: actions/checkout@v4
-           with:
-            sparse-checkout:
-                .github
-                src 
-            
+  train-model:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: 2024-26.ML-01/cerza
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          # Add any additional ML frameworks
+          pip install numpy pandas scikit-learn tensorflow
+
+      - name: Train model
+        run: |
+          python train.py
+          
+      - name: Save model artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: model-artifacts
+          path: 2024-26.ML-01/cerza
