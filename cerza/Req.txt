@@ -1,12 +1,4 @@
-#REQUIREMENTS
-import pandas as pd
-import numpy as np
-from sklearn.model_selection import  train_test_split, cross_validate, KFold
-from sklearn.pipeline import Pipeline
-from sklearn.metrics import mean_absolute_error, mean_absolute_percentage_error, median_absolute_error, r2_score, make_scorer, mean_squared_error, confusion_matrix, classification_report, accuracy_score, f1_score, roc_auc_score
-from sklearn.compose import ColumnTransformer
-from sklearn.preprocessing import StandardScaler, OneHotEncoder, LabelEncoder
-from sklearn.ensemble import RandomForestClassifier
-import sklearn
-from sklearn.model_selection import GridSearchCV
-from sklearn.tree import DecisionTreeClassifier
+numpy==2.2.5
+pandas==2.2.3
+scikit-learn==1.6.1
+scipy==1.15.2
