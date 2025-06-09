@@ -29,7 +29,7 @@ jobs:
 
       - name: Train model
         run: |
-          mdl.py
+          python mdl.py
           
       - name: Save model artifacts
         uses: actions/upload-artifact@v4
