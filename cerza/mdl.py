@@ -37,7 +37,7 @@ pipe=Pipeline([
 
 x_train,x_test,y_train,y_test=train_test_split(
     x,y_encoded,
-    train_size=0.8
+    train_size=0.8,
     shuffle=True,
     random_state=44,
     stratify=y_encoded
