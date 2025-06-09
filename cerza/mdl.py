@@ -12,7 +12,7 @@ from sklearn.tree import DecisionTreeClassifier
 
 sklearn.set_config(transform_output='pandas')
 df=pd.read_csv("penguins_cleaned.csv")
-x=df.drop(["species","island"], axis=0)
+x=df.drop(["species","island"], axis=1)
 y=df["species"]
 
 num=["bill_length_mm","bill_depth_mm",
