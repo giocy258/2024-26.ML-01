@@ -20,18 +20,16 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
+          python-version: '3.13'
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          # Add any additional ML frameworks
-          pip install numpy pandas scikit-learn tensorflow
 
       - name: Train model
         run: |
-          python train.py
+          mdl.py
           
       - name: Save model artifacts
         uses: actions/upload-artifact@v3
